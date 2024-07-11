@@ -3,13 +3,11 @@ import { Icon } from '@iconify/vue';
 import { ElMessage, ElMessageBox } from 'element-plus'
 import {useUserStore} from "@/stores/userStore.js";
 const userStore = useUserStore()
-
 const confirm = () => {
   console.log('用户退出')
   // 退出登录逻辑
   // 清除用户信息 触发action
   userStore.clearUserInfo()
-
 }
 const open = () => {
   ElMessageBox.confirm(

@@ -1,6 +1,5 @@
 //createRouter: 创建router实例对象
 //createWebHistory: 创建history模式的路由
-
 import { createRouter, createWebHistory } from 'vue-router'
 import Login from '@/views/Login/Login_index.vue'
 import Layout from '@/views/Layout/Layout_index.vue'
@@ -13,7 +12,6 @@ import Pay from "@/views/Pay/Pay_index.vue";
 import Dynamic from '@/views/Dynamic/Dynamic_index.vue'; // 新增动态页面
 import Cart from '@/views/Cart/Cart_index.vue'; // 新增购物车页面
 import MyRabbit from '@/views/MyRabbit/MyRabbit_index.vue'; // 新增我的小兔页面
-
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   //path和component对应关系的位置
@@ -72,5 +70,4 @@ const router = createRouter({
     }
   }
 })
-
 export default router

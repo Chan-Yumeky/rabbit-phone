@@ -19,7 +19,6 @@ const getGoodList = async () => {
 }
 onMounted(() => getGoodList())
 
-
 // tab切换回调
 const tabChange = () => {
   console.log('tab切换了', reqData.value.sortField)
@@ -104,9 +103,6 @@ const load = async () => {
         color: $priceColor;
         font-size: 4.65vw;
       }
-    }
-    .goods-item:nth-last-child(-n+2) {
-      margin-bottom: 15.5vw;
     }
   }
 }

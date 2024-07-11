@@ -1,7 +1,5 @@
 // 定义懒加载指令
-
 import { useIntersectionObserver } from "@vueuse/core";
-
 export const lazyPlugin = {
     install(app){
         // 懒加载指令逻辑

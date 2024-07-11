@@ -1,6 +1,5 @@
 <script setup>
 import {ref} from "vue";
-
 // props适配图片列表
 defineProps({
   imageList: {
@@ -8,10 +7,8 @@ defineProps({
     default: () => []
   }
 })
-
 // 当前活动的图片索引
 const activeIndex = ref(0)
-
 // 切换图片时更新当前活动图片索引
 const enterhandler = (i) => {
   activeIndex.value = i
@@ -40,34 +37,41 @@ const enterhandler = (i) => {
   position: relative;
   display: flex;
   flex-direction: column;
+
   .el-carousel {
     width: 100%;
     height: 100vw;
     background: #f5f5f5;
+
     ::v-deep .el-carousel__container {
       position: relative;
       height: 100vw;
     }
+
     img {
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
   }
+
   .small {
     display: flex;
     justify-content: center;
     margin-top: 10px;
+
     li {
       width: 15.81vw;
       height: 15.81vw;
       margin-left: 2.79vw;
       margin-bottom: 3.49vw;
       cursor: pointer;
+
       &:hover,
       &.active {
         border: 0.47vw solid $xtxColor;
       }
+
       img {
         width: 100%;
         height: 100%;

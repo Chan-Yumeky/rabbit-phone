@@ -27,8 +27,6 @@ onUnmounted(() => {
   </div>
 </template>
 
-
-
 <style scoped>
 .scroll-to-top {
   position: fixed;
@@ -49,7 +47,6 @@ onUnmounted(() => {
   transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
   z-index: 9999;
 }
-
 .scroll-to-top.show {
   opacity: 1;
   transform: translateY(0);

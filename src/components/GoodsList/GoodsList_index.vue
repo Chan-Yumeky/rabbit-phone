@@ -19,14 +19,6 @@ const getGoodList = async () => {
 }
 onMounted(() => getGoodList())
 
-
-// tab切换回调
-// const tabChange = () => {
-//   console.log('tab切换了', reqData.value.sortField)
-//   reqData.value.page = Math.floor(Math.random() * 18) + 1;
-//   getGoodList()
-// }
-
 //加载更多
 const load = async () => {
   console.log('加载更多数据')
@@ -38,7 +30,6 @@ const load = async () => {
   const res = await getSubCategoryAPI(reqData.value)
   goodList.value = [...goodList.value,...res.result.items]
 }
-
 </script>
 
 <template>
@@ -56,9 +47,11 @@ const load = async () => {
 .sub-container {
   background-color: #fff;
   padding-bottom: 15.5vw;
+
   .el-tab {
     padding: 0 2vw;
   }
+
   .body {
     width: 100%;
     display: flex;

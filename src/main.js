@@ -1,9 +1,6 @@
-// import './assets/main.css'
-
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 import piniaPluginPersistedstate from 'pinia-plugin-persistedstate'
-
 import ElementPlus from 'element-plus'
 import 'element-plus/dist/index.css'
 import * as ElementPlusIconsVue from '@element-plus/icons-vue'
@@ -18,14 +15,11 @@ import { lazyPlugin } from '@/directives'
 // 引入全局组件插件
 import { componentPlugin } from "@/components/components_index.js";
 
-
-
 const app = createApp(App)
 const pinia = createPinia()
 // 注册持久化插件
 pinia.use(piniaPluginPersistedstate)
 app.use(pinia)
-
 app.use(router)
 app.use(ElementPlus,{zIndex:3000})
 app.use(lazyPlugin)

@@ -6,25 +6,25 @@ import GoodsList from "@/components/GoodsList/GoodsList_index.vue";
 import BackToTop from "@/components/BackToTop/BackToTop_index.vue";
 import { useRouter } from "vue-router";
 import {ElMessage} from "element-plus";
-
-
 const cartStore = useCartStore()
 const userStore = useUserStore()
 const router = useRouter()
-
 // 单选回调
 const singleCheck = ( i, selected ) => {
   console.log( i, selected )
   cartStore.singleCheck(i.skuId, selected)
 }
-
 const allCheck = (selected) => {
   cartStore.allCheck(selected)
 }
-
 const goToPay = () => {
   if (userStore.userInfo.token){
-    router.push('/checkout')
+    if (cartStore.cartList.length === 0){
+      ElMessage({
+        message: '无有效商品',
+        type:"warning"
+      })
+    } else router.push('/checkout')
   }else {
     ElMessage({
       message:'用户未登录',
@@ -33,7 +33,6 @@ const goToPay = () => {
     router.push('/my-rabbit')
   }
 }
-
 </script>
 
 <template>

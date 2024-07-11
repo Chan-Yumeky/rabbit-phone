@@ -1,5 +1,4 @@
 // 封装购物车模块
-
 import { defineStore } from "pinia";
 import { computed,ref } from "vue";
 import { useUserStore } from "@/stores/userStore.js";
@@ -8,7 +7,6 @@ import { insertCartAPI, findNewCartListAPI, delCartAPI } from "@/apis/cart.js";
 export const useCartStore = defineStore('cart',() => {
     const userStore = useUserStore()
     const isLogin = computed(() => userStore.userInfo.token)
-
     // 定义state - cartList
     const cartList = ref([])
 

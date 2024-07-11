@@ -17,12 +17,9 @@ const getCheckInfo = async () => {
   const item = checkInfo.value.userAddresses.find(item => item.isDefault === 0)
   curAddress.value = item
 }
-
 onMounted(() => getCheckInfo())
-
 // 控制弹窗打开
 const showDialog = ref(false)
-
 // 切换地址
 const activeAddress = ref({})
 const switchAddress = (item) => {
@@ -33,12 +30,10 @@ const confirm = () => {
   showDialog.value = false
   activeAddress.value = {}
 }
-
 const cancel = () => {
   showDialog.value = false
   activeAddress.value = {}
 }
-
 // 创建订单
 const createOrder = async () => {
   const res = await createOrderAPI({
@@ -65,11 +60,9 @@ const createOrder = async () => {
     message:'订单提交成功',
     type: "success"
   })
-
   // 更新购物车
   await cartStore.updateNewList()
 }
-
 const goBackToCart = () => {
   router.push({
     path: '/cart'

@@ -6,7 +6,6 @@ import { ElMessage } from "element-plus";
 import { useCartStore } from "@/stores/cartStore.js";
 // import ImageView from "@/components/ImageView/ImageView_index.vue";
 // import XtxSku from "@/components/XtxSku/index.vue";
-
 const cartStore = useCartStore()
 const goods = ref({})
 const route = useRoute()
@@ -48,7 +47,6 @@ const addCart = () => {
     ElMessage.warning('请选择规格')
   }
 }
-
 </script>
 
 <template>
