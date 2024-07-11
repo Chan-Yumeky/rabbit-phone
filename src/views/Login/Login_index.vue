@@ -63,7 +63,6 @@ const doLogin = () => {
 }
 </script>
 
-
 <template>
   <div>
     <section class="login-section">
@@ -96,7 +95,6 @@ const doLogin = () => {
 </template>
 
 <style scoped lang='scss'>
-
 .login-section {
   //background: url('@/assets/images/login-bg.png') no-repeat center / cover;
   display: flex;
@@ -105,16 +103,10 @@ const doLogin = () => {
   width:100vw ;
   margin: 50vw 0;
   background-color: #fff;
-
   .wrapper {
     width: 90vw;
     background: #fff;
-    //position: absolute;
-    //left: 50%;
-    //top: 54px;
-    //transform: translate3d(100px, 0, 0);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
-
     nav {
       font-size: 14px;
       height: 55px;
@@ -124,7 +116,6 @@ const doLogin = () => {
       padding: 0 40px;
       text-align: right;
       align-items: center;
-
       a {
         flex: 1;
         line-height: 1;
@@ -136,53 +127,24 @@ const doLogin = () => {
     }
   }
 }
-
-.login-footer {
-  padding: 30px 0 50px;
-  background: #fff;
-
-  p {
-    text-align: center;
-    color: #999;
-    padding-top: 20px;
-
-    a {
-      line-height: 1;
-      padding: 0 10px;
-      color: #999;
-      display: inline-block;
-
-      ~a {
-        border-left: 1px solid #ccc;
-      }
-    }
-  }
-}
-
 .account-box {
   .toggle {
     padding: 15px 40px;
     text-align: right;
-
     a {
       color: $xtxColor;
-
       i {
         font-size: 14px;
       }
     }
   }
-
   .form {
     padding: 0 20px 20px 20px;
-
     &-item {
       margin-bottom: 28px;
-
       .input {
         position: relative;
         height: 36px;
-
         >i {
           width: 34px;
           height: 34px;
@@ -195,24 +157,20 @@ const doLogin = () => {
           line-height: 34px;
           font-size: 18px;
         }
-
         input {
           padding-left: 44px;
           border: 1px solid #cfcdcd;
           height: 36px;
           line-height: 36px;
           width: 100%;
-
           &.error {
             border-color: $priceColor;
           }
-
           &.active,
           &:focus {
             border-color: $xtxColor;
           }
         }
-
         .code {
           position: absolute;
           right: 1px;
@@ -227,26 +185,22 @@ const doLogin = () => {
           cursor: pointer;
         }
       }
-
       >.error {
         position: absolute;
         font-size: 12px;
         line-height: 28px;
         color: $priceColor;
-
         i {
           font-size: 14px;
           margin-right: 2px;
         }
       }
     }
-
     .agree {
       a {
         color: #069;
       }
     }
-
     .btn {
       display: block;
       width: 100%;
@@ -255,19 +209,16 @@ const doLogin = () => {
       text-align: center;
       line-height: 40px;
       background: $xtxColor;
-
       &.disabled {
         background: #cfcdcd;
       }
     }
   }
-
   .action {
     padding: 20px 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     .url {
       a {
         color: #999;

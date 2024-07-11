@@ -16,12 +16,6 @@ const activeIndex = ref(0)
 const enterhandler = (i) => {
   activeIndex.value = i
 }
-
-// 大图切换时的处理器
-// const handleSlideChange = (index) => {
-//   activeIndex.value = index
-// }
-
 </script>
 
 <template>
@@ -43,45 +37,37 @@ const enterhandler = (i) => {
 <style scoped lang="scss">
 .goods-image {
   width: 100vw;
-  //height: 400px;
   position: relative;
   display: flex;
   flex-direction: column;
-
   .el-carousel {
     width: 100%;
     height: 100vw;
     background: #f5f5f5;
-
     ::v-deep .el-carousel__container {
       position: relative;
       height: 100vw;
     }
-
     img {
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
   }
-
   .small {
     display: flex;
     justify-content: center;
     margin-top: 10px;
-
     li {
       width: 15.81vw;
       height: 15.81vw;
       margin-left: 2.79vw;
       margin-bottom: 3.49vw;
       cursor: pointer;
-
       &:hover,
       &.active {
         border: 0.47vw solid $xtxColor;
       }
-
       img {
         width: 100%;
         height: 100%;

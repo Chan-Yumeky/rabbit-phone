@@ -61,7 +61,6 @@ const open = () => {
         </div>
       </div>
     </div>
-
     <!-- 订单信息框 -->
     <div class="my_order">
       <div class="order_head">
@@ -148,13 +147,10 @@ const open = () => {
         </div>
       </div>
     </div>
-
   </div>
-
   <div class="log_out">
     <el-button style="width: 99%; height: 100%; border-radius: 2vw" plain @click="open">退出登录</el-button>
   </div>
-
 </template>
 
 <style scoped lang="scss">
@@ -166,66 +162,51 @@ const open = () => {
   justify-content: center;
   align-items: center;
   margin-top: 1vw;
-
   .top {
     display: flex;
     justify-content: space-between;
     width: 95%;
     height: 20vw;
-    //background-color: #999;
-
     .left_side {
       display: flex;
-
       .head_portrait {
         width: 15vw;
         height: 15vw;
-        //background-color: #fff;
         margin: 2.5vw 2vw;
         border-radius: 7.5vw;
         border: solid 0.5vw #27ba9b;
       }
-
       .name {
         margin: 5vw 0;
-
         h3 {
           font-size: 3.8vw;
         }
-
         small {
           font-size: 2.75vw;
         }
       }
     }
-
     .right_side {
       display: flex;
-
       .customer_service {
         right: 0;
         width: 11vw;
         display: flex;
         flex-direction: column;
-        //justify-content: center;
         align-items: center;
         margin-top: 4vw;
-
         p {
           font-size: 2.5vw;
           line-height: 4vw;
         }
       }
-
       .set {
         right: 0;
         width: 10vw;
         display: flex;
         flex-direction: column;
-        //justify-content: center;
         align-items: center;
         margin-top: 4vw;
-
         p {
           font-size: 2.5vw;
           line-height: 4vw;
@@ -233,19 +214,16 @@ const open = () => {
       }
     }
   }
-  
   .my_order {
     width: 95%;
     height: 20vw;
     background-color: #f1f1f1;
     margin-top: 1vw;
     border-radius: 2vw;
-
     .order_head {
       height: 6vw;
       display: flex;
       justify-content: space-between;
-
       h4 {
         margin-left: 3vw;
         font-size: 3vw;
@@ -253,7 +231,6 @@ const open = () => {
         display: flex;
         align-items: center;
       }
-
       p {
         font-size: 2.75vw;
         margin-right: 2vw;
@@ -261,19 +238,16 @@ const open = () => {
         align-items: center;
       }
     }
-
     .order_list {
       height: 14vw;
       display: flex;
       flex: 1;
-
       .orders {
         width: 20%;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-
         p {
           font-size: 2.8vw;
           line-height: 5vw;
@@ -281,7 +255,6 @@ const open = () => {
       }
     }
   }
-
   .other_things {
     width: 95%;
     height: 40vw;
@@ -289,20 +262,15 @@ const open = () => {
     margin-top: 3vw;
     border-radius: 2vw;
     display: flex;
-    //flex: 1;
-
-
     .post {
       width: 33.3%;
       height: 100%;
       padding: 1vw 0;
-
       .o_head{
         height: 30%;
         display: flex;
         flex-direction: column;
         margin-top: 1vw;
-
         h4 {
           height: 50%;
           margin-left: 3vw;
@@ -311,7 +279,6 @@ const open = () => {
           display: flex;
           align-items: center;
         }
-
         small {
           height: 50%;
           font-size: 2.5vw;
@@ -319,18 +286,15 @@ const open = () => {
           margin-left: 3vw;
         }
       }
-
       .post_detail {
         height: 70%;
         display: flex;
         flex-direction: column;
-
         .post_put {
           height: 50%;
           margin: 0 2vw 2vw;
           border-radius: 2vw;
           background-color: #dedede;
-          //font-size: ;
           font-weight: 600;
           color: rgba(0, 69, 110, 0.92);
           display: flex;
@@ -338,10 +302,7 @@ const open = () => {
           align-items: center;
         }
       }
-
-
     }
-
     .collection {
       width: 33.4%;
       height: 100%;
@@ -349,13 +310,11 @@ const open = () => {
       border-left: solid 0.1vw;
       border-right: solid 0.1vw;
       border-image: linear-gradient(to bottom, #f1f1f1, #c7c7c7, #f1f1f1) 1;
-
       .o_head{
         height: 30%;
         display: flex;
         flex-direction: column;
         margin-top: 1vw;
-
         h4 {
           height: 50%;
           margin-left: 3vw;
@@ -364,7 +323,6 @@ const open = () => {
           display: flex;
           align-items: center;
         }
-
         small {
           height: 50%;
           font-size: 2.5vw;
@@ -372,20 +330,16 @@ const open = () => {
           margin-left: 3vw;
         }
       }
-
       .collection_detail {
-        //height: 70%;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-
         img {
           width: 15vw;
           height: 15vw;
           margin: 1vw 1vw;
         }
-
         p {
           display: flex;
           text-align: center;
@@ -394,18 +348,15 @@ const open = () => {
         }
       }
     }
-
     .footprint {
       width: 33.3%;
       height: 100%;
       padding: 1vw 0;
-
       .o_head{
         height: 30%;
         display: flex;
         flex-direction: column;
         margin-top: 1vw;
-
         h4 {
           height: 50%;
           margin-left: 3vw;
@@ -414,7 +365,6 @@ const open = () => {
           display: flex;
           align-items: center;
         }
-
         small {
           height: 50%;
           font-size: 2.5vw;
@@ -422,20 +372,17 @@ const open = () => {
           margin-left: 3vw;
         }
       }
-
       .footprint_list {
         height: 70%;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-
         .footprint_detail {
           width: 100%;
           height: 33.3%;
           display: flex;
           align-items: center;
-
           .footprint_icon {
             width: 7vw;
             height: 7vw;
@@ -446,7 +393,6 @@ const open = () => {
             justify-content: center;
             align-items: center;
           }
-
           p {
             font-size: 2.8vw;
           }
@@ -454,9 +400,7 @@ const open = () => {
       }
     }
   }
-
 }
-
 .log_out {
   width: 100vw;
   height: 12vw;
@@ -466,8 +410,5 @@ const open = () => {
   align-items: center;
   position: fixed;
   bottom: 20vw;
-
-
 }
-
 </style>

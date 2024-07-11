@@ -3,7 +3,6 @@ import HomeNew from './components/HomeNew.vue'
 import HomeHot from './components/HomeHot.vue'
 import HomeBanner_Phone from "@/views/Home/components/HomeBanner_Phone.vue";
 import GoodsList from "@/components/GoodsList/GoodsList_index.vue";
-
 </script>
 
 <template>
@@ -26,9 +25,7 @@ import GoodsList from "@/components/GoodsList/GoodsList_index.vue";
   justify-content: center;
   align-items: center;
   text-align: center;
-
 }
-
 .new-and-hot {
   width: 100%;
   height: 52.5vw;

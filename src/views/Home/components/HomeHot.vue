@@ -2,18 +2,12 @@
 import HomePanel from './HomePanel.vue'
 import { getHotAPI } from '@/apis/home'
 import { onMounted, ref } from 'vue'
-
 const hotList = ref([])
 const getHotList = async () => {
   const res = await getHotAPI()
   hotList.value = res.result
 }
-// let fpage = Math.floor(Math.random() * 3);
-// let lpage = (fpage + 2) % 4;
 onMounted( () => getHotList())
-// console.log(hotList)
-
-
 </script>
 
 <template>
@@ -34,22 +28,17 @@ onMounted( () => getHotList())
 .goods-list {
   display: flex;
   width: 100%;
-
   li {
     width: 50%;
-
     background: #f0f9f4;
     transition: all .5s;
-
     &:hover {
       transform: translate3d(0, -3px, 0);
       box-shadow: 0 3px 8px rgb(0 0 0 / 20%);
     }
-
     img {
       width: 99.5%;
     }
-
     p {
       font-size: 3vw;
       padding: 2vw 1vw 0 1vw;
@@ -58,19 +47,15 @@ onMounted( () => getHotList())
       overflow: hidden;
       white-space: nowrap;
     }
-
     .desc {
       color: #999;
     }
   }
-
   li:first-child {
     border-radius: 0 0 0 4vw;
   }
-
   li:last-child {
     border-radius: 0 0 4vw 0;
   }
-
 }
 </style>

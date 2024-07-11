@@ -14,9 +14,6 @@ const userStore = useUserStore()
   <template v-else>
     <Login />
   </template>
-
-
-
 </template>
 
 <style scoped lang="scss">

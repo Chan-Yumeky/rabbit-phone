@@ -51,13 +51,14 @@ const route = useRoute();
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 0; /* 确保没有多余的内边距 */
+    padding: 0;
 
     a {
       flex: 1;
 
       li {
-        flex: 1; /* 每个 li 元素均等分配剩余空间 */
+        /* 每个 li 元素均等分配剩余空间 */
+        flex: 1;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -65,7 +66,7 @@ const route = useRoute();
         color: #999;
         user-select: none;
         cursor: pointer;
-        text-align: center; /* 确保文本居中 */
+        text-align: center;
 
         p {
           font-size: 3vw;
@@ -74,7 +75,6 @@ const route = useRoute();
         &:hover,
         &.active {
           color: $xtxColor;
-          //border-bottom: 1px solid $xtxColor;
         }
       }
     }

@@ -12,28 +12,11 @@ const categoryStore = useCategoryStore();
   <header class="app-header">
     <div class="container">
       <div class="search">
-        <el-button
-            class="search-button"
-            round
-            plain
-            style="border-radius: 4.5vw 0 0 4.5vw"
-            type="info"
-        >
+        <el-button class="search-button" round plain style="border-radius: 4.5vw 0 0 4.5vw" type="info">
           <Icon icon="tabler:scan" style="height: 5vw;width: 5vw"/>
         </el-button>
-        <el-input
-            class="search-input"
-            v-model="text"
-            placeholder="搜一搜"
-            :prefix-icon="Search"
-        >
-        </el-input>
-        <el-button
-            class="search-button"
-            round
-            style="border-radius: 0 4.5vw 4.5vw 0; font-size: 3vw"
-            type="success"
-        >搜索</el-button>
+        <el-input class="search-input" v-model="text" placeholder="搜一搜" :prefix-icon="Search"></el-input>
+        <el-button class="search-button" round style="border-radius: 0 4.5vw 4.5vw 0; font-size: 3vw" type="success">搜索</el-button>
       </div>
 
       <div class="app-header-nav_box">

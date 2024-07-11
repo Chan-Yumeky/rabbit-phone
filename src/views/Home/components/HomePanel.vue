@@ -1,5 +1,4 @@
 <script setup>
-
 defineProps({
   title:{
     type:String
@@ -9,7 +8,6 @@ defineProps({
   }
 })
 </script>
-
 
 <template>
   <div class="home-panel">
@@ -31,22 +29,17 @@ defineProps({
   background-color: #fff;
   width: 50%;
   height: 52.5vw;
-
   .container {
     width: 100%;
     height: 52.5vw;
-
-
     .head {
       width: 100%;
       margin-top: 0.5vw;
       padding: 3.5vw 0;
-
       border-radius: 4vw 4vw 0 0;
       display: flex;
       align-items: flex-end;
       background: #f0f9f4;
-
       h3 {
         flex: 1;
         font-size: 5vw;
@@ -54,7 +47,6 @@ defineProps({
         margin-left: 1.1vw;
         height: 6.56vw;
         line-height: 6.56vw;
-
         small {
           font-size: 2.5vw;
           color: #999;

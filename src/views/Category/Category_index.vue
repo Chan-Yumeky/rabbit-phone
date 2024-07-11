@@ -47,37 +47,31 @@ const { categoryData } = useCategory()
   .sub-list {
     margin-top: 20vw;
     background-color: #fff;
-
     ul {
       width: 100%;
       height: 30%;
       display: flex;
       padding-top: 2vw;
       flex-wrap: wrap;
-
       li {
         flex: 1 1 20%;
         max-width: 20%;
         box-sizing: border-box;
         text-align: center;
         padding: 1vw;
-
         a {
           text-align: center;
           display: block;
           font-size: 2.5vw;
-
           img {
             width: 15.3vw;
             height: 15.3vw;
             border-radius: 4vw;
           }
-
           p {
             font-size: 2.5vw;
             line-height: 5vw;
           }
-
           &:hover {
             color: $xtxColor;
           }
@@ -85,19 +79,16 @@ const { categoryData } = useCategory()
       }
     }
   }
-
   .ref-goods {
     background-color: #fff;
     margin-top: 1vw;
     position: relative;
-
     .body {
       width: 100%;
       height: 69.65vw;
       display: flex;
       background-color: #f5f5f5;
       padding: 0 0.5vw;
-
       .goods-item {
         width: 50%;
         flex: 1 1 50%;
@@ -106,15 +97,12 @@ const { categoryData } = useCategory()
         text-align: center;
         border-radius: 4vw;
         margin: 0 0.5vw;
-
         .name {
           font-size: 3vw;
         }
-
       }
     }
   }
-
   .ref-goods:last-child {
     //margin-bottom: 15vw;
     padding-bottom: 15vw;

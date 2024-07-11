@@ -100,12 +100,8 @@ const goToPay = () => {
           </div>
         </div>
       </template>
-
       <BackToTop />
-
-
     </div>
-
   </div>
 
   <!-- 底部结算栏   -->
@@ -128,8 +124,6 @@ const goToPay = () => {
       </div>
     </div>
   </div>
-
-
 </template>
 
 <style scoped lang="scss">
@@ -141,8 +135,6 @@ const goToPay = () => {
   justify-content: center;
   align-items: center;
   padding-bottom: 30vw;
-
-
   .head_title {
     width: 100%;
     height: 10vw;
@@ -152,24 +144,18 @@ const goToPay = () => {
     background-color: #fff;
     margin: 1vw 1vw;
     padding: 0 2vw;
-
-
     .title {
       display: flex;
       justify-content: center;
       align-items: center;
       margin: 0 2vw;
-
       h3 {
         font-size: 4.5vw;
       }
-
       p {
         font-size: 2.5vw;
-
       }
     }
-
     .address{
       width: 40vw;
       white-space: nowrap;
@@ -179,7 +165,6 @@ const goToPay = () => {
       align-items: center;
     }
   }
-
   .layer {
     width: 96%;
     background-color: #f1f1f1;
@@ -187,10 +172,6 @@ const goToPay = () => {
     flex-direction: column;
     border-radius: 4vw;
     margin: 2vw 2vw;
-    //justify-content: left;
-    //align-items: center;
-
-
     .empty {
       height: 120vw;
       display: flex;
@@ -198,7 +179,6 @@ const goToPay = () => {
       align-items: center;
       flex-direction: column;
       background-color: #fff;
-
       img {
         width: 25vw;
         height: 25vw;
@@ -206,16 +186,13 @@ const goToPay = () => {
         border-radius: 12.5vw;
         margin: 5vw 0;
       }
-
       p {
         margin-bottom: 2.5vw;
       }
-
       small {
         color: #999;
       }
     }
-
     .like {
       padding: 1vw 1vw;
       margin-bottom: 0.5vw;
@@ -225,71 +202,55 @@ const goToPay = () => {
       justify-content: center;
       align-items: center;
       background-color: #fff;
-
       p {
         color: #e14e0c;
         font-size: 4vw;
       }
     }
-
     .layer_head {
       width: 100%;
       height: 10vw;
-
       display: flex;
       justify-content: left;
       align-items: center;
-
       .layer_checkbox {
         width: 10vw;
         display: flex;
         justify-content: center;
         align-items: center;
       }
-
       p {
         font-size: 3vw;
       }
-
     }
     .list {
-      //height: 310px;
       overflow: auto;
-      //padding: 0 10px;
-
       &::-webkit-scrollbar {
         width: 10px;
         height: 10px;
       }
-
       &::-webkit-scrollbar-track {
         background: #f8f8f8;
         border-radius: 2px;
       }
-
       &::-webkit-scrollbar-thumb {
         background: #eee;
         border-radius: 10px;
       }
-
       &::-webkit-scrollbar-thumb:hover {
         background: #ccc;
       }
-
       .item {
         border-bottom: 1px solid #f5f5f5;
         padding: 2vw 0;
         position: relative;
         display: flex;
-
-
         .item_checkbox {
           width: 10vw;
           display: flex;
           justify-content: center;
           align-items: center;
         }
-
         i {
           position: absolute;
           bottom: 11vw;
@@ -298,57 +259,44 @@ const goToPay = () => {
           color: #666;
           transition: all 0.5s;
         }
-
         &:hover {
           i {
             opacity: 1;
             cursor: pointer;
           }
         }
-
         a {
           display: flex;
           align-items: center;
-
           img {
             height: 80px;
             width: 80px;
           }
-
           .center {
             padding: 0 10px;
             width: 42vw;
-
             .name {
               font-size: 3vw;
             }
-
             .attr {
               color: #999;
               padding-top: 1.2vw;
               font-size: 2.8vw;
             }
-
             .discount {
               color: orange;
               font-size: 2.5vw;
               padding-top: 1vw;
             }
-
             .price {
               font-size: 3.72vw;
               color: $priceColor;
               padding-top: 1vw;
             }
           }
-
           .right {
             width: 20vw;
-            //padding-right: 20px;
             text-align: center;
-
-
-
             .count {
               color: #999;
               margin-top: 5px;
@@ -371,43 +319,36 @@ const goToPay = () => {
   position: fixed;
   bottom: 15vw;
   z-index: 100;
-
   .pay_checkbox {
     width: 15vw;
     display: flex;
     justify-content: center;
     align-items: center;
-
     p {
       margin-left: 1vw;
       font-size: 2.8vw;
     }
   }
-
   .calculate_and_pay {
     width: 70vw;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-
     .calculate {
       width: 60%;
       height: 100%;
       display: flex;
       justify-content: end;
       align-items: center;
-
       h4 {
         font-size: 2.8vw;
       }
-
       .price {
         font-size: 4.2vw;
         color: $priceColor;
       }
     }
-
     .pay_button {
       width: 40%;
       height: 100%;
@@ -415,17 +356,11 @@ const goToPay = () => {
       justify-content: center;
       align-items: center;
       font-size: 4vw;
-
       .el-button>span {
           font-size: 3.2vw;
           font-weight: 600;
-        }
-
-
+      }
     }
-
   }
-
 }
-
 </style>

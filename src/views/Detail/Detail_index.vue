@@ -4,8 +4,6 @@ import { onMounted, ref } from "vue";
 import { useRoute } from "vue-router";
 import { ElMessage } from "element-plus";
 import { useCartStore } from "@/stores/cartStore.js";
-
-
 // import ImageView from "@/components/ImageView/ImageView_index.vue";
 // import XtxSku from "@/components/XtxSku/index.vue";
 
@@ -64,6 +62,7 @@ const addCart = () => {
               <!-- 图片预览区 -->
               <!-- 经过全局注册通用组件XtxImageView，无需再次引入ImageView组件 -->
               <XtxImageView :image-list="goods.mainPictures"/>
+
               <!-- 统计数量 -->
               <ul class="goods-sales">
                 <li>
@@ -83,14 +82,15 @@ const addCart = () => {
                 </li>
                 <li>
                   <p>品牌信息</p>
-                  <!--                  <p>{{ goods.brand.name }}</p>-->
+                  <!--<p>{{ goods.brand.name }}</p>-->
                   <p>高仿品牌</p>
                   <p><i class="iconfont icon-dynamic-filling"></i>品牌主页</p>
                 </li>
               </ul>
             </div>
+
+            <!-- 商品信息区 -->
             <div class="spec">
-              <!-- 商品信息区 -->
               <p class="g-name"> {{ goods.name }} </p>
               <p class="g-desc"> {{ goods.desc }} </p>
               <p class="g-price">
@@ -112,6 +112,7 @@ const addCart = () => {
                   </dd>
                 </dl>
               </div>
+
               <!-- sku组件 -->
               <!-- 经过全局注册通用组件XtxSku，无需再次引入XtxSku组件 -->
               <XtxSku :goods="goods" @change="skuChange" />
@@ -123,9 +124,9 @@ const addCart = () => {
                   加入购物车
                 </el-button>
               </div>
-
             </div>
           </div>
+
           <div class="goods-footer">
             <div class="goods-article">
               <!-- 商品详情 -->
@@ -143,14 +144,9 @@ const addCart = () => {
                   </ul>
                   <!-- 图片 -->
                   <img v-for="img in goods.details.pictures" :src="img" :key="img" alt="">
-
                 </div>
               </div>
             </div>
-            <!--            &lt;!&ndash; 24热榜+专题推荐 &ndash;&gt;-->
-            <!--            <div class="goods-aside">-->
-
-            <!--            </div>-->
           </div>
         </div>
       </div>
@@ -173,91 +169,72 @@ const addCart = () => {
   .goods-info {
     width: 100%;
     background: #fff;
-    //display: flex;
-
     .media {
       width: 100%;
       overflow: hidden;
-
       img{
         max-width: 100%;
         height: auto;
       }
     }
-
     .spec {
       flex: 1;
       padding: 6.98vw 6.98vw;
-
       .add_count {
         display: flex;
         align-items: center;
         justify-content: center;
-
         .counter {
           margin: 0 2vw;
         }
       }
     }
   }
-
   .goods-footer {
     width: 100%;
     display: flex;
     flex-direction: column;
     margin-top: 4.65vw;
-
     .goods-article {
       width: 100%;
       margin-right: 4.65vw;
     }
   }
-
   .goods-tabs {
     background: #fff;
   }
-
   .goods-warn {
-    //min-height: 600px;
     background: #fff;
     margin-top: 4.65vw;
   }
-
   .number-box {
     display: flex;
     align-items: center;
-
     .label {
       width: 13.95vw;
       color: #999;
       padding-left: 2.33vw;
     }
   }
-
   .g-name {
     font-size: 5.12vw;
   }
-
   .g-desc {
     color: #999;
     margin-top: 2.33vw;
   }
-
   .g-price {
     margin-top: 2.33vw;
-
     span {
       &::before {
         content: "¥";
         font-size: 3.26vw;
       }
-
       &:first-child {
         color: $priceColor;
         margin-right: 2.33vw;
         font-size: 5.12vw;
       }
-
       &:last-child {
         color: #999;
         text-decoration: line-through;
@@ -265,37 +242,30 @@ const addCart = () => {
       }
     }
   }
-
   .g-service {
     background: #f5f5f5;
     width: 100%;
     padding: 4.65vw 2.33vw 0 2.33vw;
     margin-top: 2.33vw;
-
     dl {
       padding-bottom: 4.65vw;
       display: flex;
       align-items: center;
-
       dt {
         width: 11.63vw;
         color: #999;
       }
-
       dd {
         color: #666;
-
         &:last-child {
           span {
             margin-right: 2.33vw;
-
             &::before {
               content: "•";
               color: $xtxColor;
               margin-right: 0.47vw;
             }
           }
-
           a {
             color: $xtxColor;
           }
@@ -303,18 +273,15 @@ const addCart = () => {
       }
     }
   }
-
   .goods-sales {
     display: flex;
     width: 100vw;
     align-items: center;
     text-align: center;
     height: 32.56vw;
-
     li {
       flex: 1;
       position: relative;
-
       ~li::after {
         position: absolute;
         top: 2.33vw;
@@ -323,27 +290,22 @@ const addCart = () => {
         border-left: 0.23vw solid #e4e4e4;
         content: "";
       }
-
       p {
         &:first-child {
           color: #999;
         }
-
         &:nth-child(2) {
           color: $priceColor;
           margin-top: 2.33vw;
         }
-
         &:last-child {
           color: #666;
           margin-top: 2.33vw;
-
           i {
             color: $xtxColor;
             font-size: 3.26vw;
             margin-right: 0.47vw;
           }
-
           &:hover {
             color: $xtxColor;
             cursor: pointer;
@@ -353,21 +315,17 @@ const addCart = () => {
     }
   }
 }
-
 .goods-tabs {
   background: #fff;
-
   nav {
     height: 16.28vw;
     line-height: 16.28vw;
     display: flex;
     border-bottom: 0.23vw solid #f5f5f5;
-
     a {
       padding: 0 5vw;
       font-size: 4.19vw;
       position: relative;
-
       > span {
         color: $priceColor;
         font-size: 3.72vw;
@@ -378,50 +336,39 @@ const addCart = () => {
 }
 
 .goods-detail {
-  //padding: 2.33vw;
   margin-bottom: 34.88vw;
-
   .attrs {
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 6.98vw;
-
     img {
       width: 93.02vw;
       height: auto;
     }
-
     li {
       display: flex;
       flex: 1 50%;
       margin-bottom: 2.33vw;
       margin-left: 5vw;
       width: 11.63vw;
-
       .dt {
         width: 15vw;
         color: #999;
       }
-
       .dd {
         flex: 1;
         color: #666;
       }
     }
   }
-
   > img {
     width: 100%;
   }
 }
-
 .btn {
-  //margin-top: 4.65vw;
   margin: 0 2vw;
 }
-
 .bread-container {
   padding: 5.81vw 0;
 }
-
 </style>

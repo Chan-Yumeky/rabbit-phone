@@ -3,18 +3,13 @@ import { getBannerAPI } from "@/apis/home.js";
 import { onMounted,ref } from 'vue'
 
 const bannerList = ref([])
-
 const getBanner = async () => {
   const res = await getBannerAPI()
   console.log(res)
   bannerList.value = res.result
 }
-
 onMounted(() => getBanner())
-
 </script>
-
-
 
 <template>
   <div class="home-banner">
@@ -25,8 +20,6 @@ onMounted(() => getBanner())
     </el-carousel>
   </div>
 </template>
-
-
 
 <style scoped lang='scss'>
 .home-banner {

@@ -4,6 +4,7 @@ import { getCheckInfoAPI, createOrderAPI } from "@/apis/checkout.js";
 import { useRouter } from "vue-router";
 import { useCartStore } from "@/stores/cartStore.js";
 import { Icon } from "@iconify/vue";
+import {ElMessage} from "element-plus";
 const checkInfo = ref({})  // 订单对象
 const curAddress = ref({})
 const router = useRouter()
@@ -55,10 +56,14 @@ const createOrder = async () => {
   })
   const orderId = res.result.id
   router.push({
-    path:'/pay',
+    path:'/',
     query:{
       id: orderId
     }
+  })
+  ElMessage({
+    message:'订单提交成功',
+    type: "success"
   })
 
   // 更新购物车
@@ -198,15 +203,12 @@ const goBackToCart = () => {
 .xtx-pay-checkout-page {
   margin-top: 4.65vw;
   width: 100vw;
-
   .container {
     width: 100vw;
-
     .wrapper {
       width: 100vw;
       background: #fff;
       padding: 0 4.65vw;
-
       .box-title {
         font-size: 3.5vw;
         font-weight: normal;
@@ -214,37 +216,29 @@ const goBackToCart = () => {
         line-height: 10vw;
         border-bottom: 1px solid #f5f5f5;
       }
-
       .box-body {
         padding: 2.4vw 0;
-
         .goods_box {
           width: 100%;
           display: flex;
           align-items: center;
           justify-content: center;
         }
-
         .goods {
           width: 100%;
           border-collapse: collapse;
           border-spacing: 0;
-
           .info {
             display: flex;
             text-align: left;
-
             img {
               width: 16vw;
               height: 16vw;
               margin: 0 1vw;
             }
-
             .right {
               width: 35vw;
               line-height: 5.5vw;
-
-
               p {
                 font-size: 2.8vw;
                 &:last-child {
@@ -254,23 +248,19 @@ const goBackToCart = () => {
               }
             }
           }
-
           tr {
             th {
               background: #f5f5f5;
               font-weight: normal;
             }
-
             td,
             th {
               text-align: center;
               padding: 0.8vw;
               border-bottom: 1px solid #f5f5f5;
-
               &:first-child {
                 border-left: 1px solid #f5f5f5;
               }
-
               &:last-child {
                 border-right: 1px solid #f5f5f5;
               }
@@ -281,38 +271,31 @@ const goBackToCart = () => {
     }
   }
 }
-
 .address {
   border: 1px solid #f5f5f5;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: #f1f1f1;
-
   .text {
     flex: 1;
     min-height: 90px;
     display: flex;
     align-items: center;
-
     .none {
       line-height: 90px;
       color: #999;
       text-align: center;
       width: 100%;
     }
-
     >ul {
       flex: 1;
       padding: 20px;
-
       li {
         line-height: 30px;
-
         span {
           color: #999;
           margin-right: 5px;
-
           >i {
             width: 0.5em;
             display: inline-block;
@@ -320,7 +303,6 @@ const goBackToCart = () => {
         }
       }
     }
-
     >a {
       color: $xtxColor;
       width: 37.2vw;
@@ -330,27 +312,21 @@ const goBackToCart = () => {
       border-right: 0.2325vw solid #f5f5f5;
     }
   }
-
   .action {
     width: 100%;
     text-align: center;
     padding-bottom: 1vw;
-
     .btn {
       width: 32.55vw;
       height: 10.695vw;
       line-height: 10.23vw;
       font-size: 3.255vw;
-
       &:first-child {
         margin-right: 2.325vw;
       }
     }
   }
 }
-
-
-
 .my-btn {
   width: 190px;
   height: 50px;
@@ -361,31 +337,26 @@ const goBackToCart = () => {
   margin-bottom: 1.1625vw;
   color: #666666;
   display: inline-block;
-
   &.active,
   &:hover {
     border-color: $xtxColor;
   }
 }
-
 .total {
   dl {
     display: flex;
     justify-content: flex-end;
     line-height: 50px;
-
     dt {
       i {
         display: inline-block;
         width: 2em;
       }
     }
-
     dd {
       width: 240px;
       text-align: right;
       padding-right: 70px;
-
       &.price {
         font-size: 20px;
         color: $priceColor;
@@ -393,35 +364,29 @@ const goBackToCart = () => {
     }
   }
 }
-
 .submit {
   text-align: right;
   padding: 60px;
   border-top: 1px solid #f5f5f5;
 }
-
 .addressWrapper {
   max-height: 500px;
   overflow-y: auto;
 }
-
 .text {
   flex: 1;
   min-height: 90px;
   display: flex;
   align-items: center;
-
   &.item {
     border: 1px solid #f5f5f5;
     margin-bottom: 10px;
     cursor: pointer;
-
     &.active,
     &:hover {
       border-color: $xtxColor;
       background: lighten($xtxColor, 50%);
     }
-
     >ul {
       padding: 10px;
       font-size: 14px;

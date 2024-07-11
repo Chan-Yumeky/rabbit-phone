@@ -1,19 +1,3 @@
-<template>
-  <div class="goods-sku">
-    <dl v-for="item in goods.specs" :key="item.id">
-      <dt>{{ item.name }}</dt>
-      <dd>
-        <template v-for="val in item.values" :key="val.name">
-          <img :class="{ selected: val.selected, disabled: val.disabled }" @click="clickSpecs(item, val)"
-            v-if="val.picture" :src="val.picture" />
-          <span :class="{ selected: val.selected, disabled: val.disabled }" @click="clickSpecs(item, val)" v-else>{{
-              val.name
-          }}</span>
-        </template>
-      </dd>
-    </dl>
-  </div>
-</template>
 <script>
 import { watchEffect } from 'vue'
 import getPowerSet from './power-set'
@@ -144,6 +128,23 @@ export default {
   }
 }
 </script>
+
+<template>
+  <div class="goods-sku">
+    <dl v-for="item in goods.specs" :key="item.id">
+      <dt>{{ item.name }}</dt>
+      <dd>
+        <template v-for="val in item.values" :key="val.name">
+          <img :class="{ selected: val.selected, disabled: val.disabled }" @click="clickSpecs(item, val)"
+               v-if="val.picture" :src="val.picture" />
+          <span :class="{ selected: val.selected, disabled: val.disabled }" @click="clickSpecs(item, val)" v-else>{{
+              val.name
+            }}</span>
+        </template>
+      </dd>
+    </dl>
+  </div>
+</template>
 
 <style scoped lang="scss">
 @mixin sku-state-mixin {
